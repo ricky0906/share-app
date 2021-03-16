@@ -7,6 +7,8 @@
 | nickname    | string   | null: false     |
 | first_name  | string   | null: false     |
 | last_name   | string   | null: false     |
+| email       | string   | null: false     |
+| password    | string   | null: false     |
 
 ### associations
 - has_many :messages
@@ -22,11 +24,11 @@
 
 ## messagesテーブル
 
-| column  |   type     | options           |
-| ------- | ---------- | ----------------- |
-| content | string     |                   |
-| user    | references | foreign_key: true |
-| room    | references | foreign_key: true |
+| column  |   type     | options                        |
+| ------- | ---------- | ------------------------------ |
+| content | string     |                                |
+| user    | references | null: false, foreign_key: true |
+| room    | references | null: false, foreign_key: true |
 
 ### associations
 - belongs_to :user
